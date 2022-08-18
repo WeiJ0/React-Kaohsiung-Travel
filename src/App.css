@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: ZpixReviewLocal;
+  src: url(./assets/zpix.woff2);
 }
 
-.App-logo {
-  height: 40vmin;
+html {
+  max-width: 800px;
+  margin: auto;
+}
+
+body {
+  font-family: ZpixReviewLocal, sans-serif !important;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+.scroll-btn {
+  position: fixed !important;
+  right: 2rem;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 60%);
+  transition: all 0.3s ease;
+}
+.scroll-btn.active {
+  bottom: 25px;
+}
+.scroll-btn > span {
+  display: block;
+  transform: rotateZ(90deg);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header nav a {
+  margin: 0 10px;
+}
+a.is-disabled {
   pointer-events: none;
 }
+.footer {
+  margin-top: auto;
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-content .nes-icon{
+  margin: 0 !important;
+  transform-origin: center !important
+}
+.footer-content p{
+  margin-bottom: 0;
+}
+.nes-btn::after {
+  pointer-events: none;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header h1 {
+  margin-bottom: 0;
+}
+section.message-list {
+  display: flex;
+  flex-direction: column;
+}
+.message-list > .message.-left {
+  align-self: flex-start;
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.message-list > .message.-right {
+  align-self: flex-end;
+}
+
+.message-list > .message {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+.info-filter {
+  margin-bottom: 15px;
+}
+.info-filter-select {
+  background-color: #212529;
+  padding: 1rem 1.2rem 1rem 1rem;
+  width: calc(100% + 8px);
+}
+
+.info-filter-select label {
+  color: #fff;
+}
+
+.info-list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+@media screen and (max-width: 799px) {
+  .header{
+    flex-direction: column;
+    align-items: center;
+  }
+  .header_logo{
+    margin-bottom: 15px;
+  }
+  .info-list {
+    grid-template-columns: 1fr;
+  }
+  .nes-container{
+    padding:1rem 1.5rem !important;
+  }
+  .nes-bcrikko::before{
+    transform: rotate(0) scale(.8) !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.info-name {
+  font-size: 1rem;
+  margin: 10px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.info-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.info-name,
+.info-desc,
+.info-travel {
+  color: #212529;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info-card .info-desc {
+  font-size: 0.85rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.detail .info-name,
+.detail .info-desc {
+  color: #fff;
+}
+
+.detail img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  margin-top: 1rem;
 }
