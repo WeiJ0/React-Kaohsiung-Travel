@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/React-Kaohsiung-Travel/static/css/main.e3c0efad.css",
-    "main.js": "/React-Kaohsiung-Travel/static/js/main.b958d82d.js",
+    "main.js": "/React-Kaohsiung-Travel/static/js/main.6391946d.js",
     "static/media/zpix.woff2": "/React-Kaohsiung-Travel/static/media/zpix.79cae3fea1d930213cb3.woff2",
+    "static/media/bg.jpg": "/React-Kaohsiung-Travel/static/media/bg.5261f573111c73e08797.jpg",
     "index.html": "/React-Kaohsiung-Travel/index.html",
     "main.e3c0efad.css.map": "/React-Kaohsiung-Travel/static/css/main.e3c0efad.css.map",
-    "main.b958d82d.js.map": "/React-Kaohsiung-Travel/static/js/main.b958d82d.js.map"
+    "main.6391946d.js.map": "/React-Kaohsiung-Travel/static/js/main.6391946d.js.map"
   },
   "entrypoints": [
     "static/css/main.e3c0efad.css",
-    "static/js/main.b958d82d.js"
+    "static/js/main.6391946d.js"
   ]
 }
