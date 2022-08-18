@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { setHistory } from "../common";
 
@@ -14,11 +14,16 @@ export default function Detail(props) {
     const condition = state.state.condition || 0;
     const scroll = state.state.scroll || 0;
 
-    console.log(state.state);
-
     const [info, setInfo] = useState(state.state.data);
     const { Id, Name, Picture1, Picdescribe1, Toldescribe, Add, Tel, Travellinginfo, Opentime, Px, Py, Website } = info;
     setHistory(Id);
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0
+        })
+    }, [])
+
 
     return (
         <section className="detail">
