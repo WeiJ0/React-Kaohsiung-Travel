@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <header >
-            <div class="nes-container">
+            <div className="nes-container">
                 <div className="header">
                     <div className="header_logo" onClick={backIndex}>
                         <section className="icon-list">

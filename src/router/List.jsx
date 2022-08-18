@@ -9,7 +9,9 @@ import InfoItem from "../components/InfoItem";
 export default function List() {
     const state = useLocation();
     let condition = state.state ? state.state.condition : 0;
+    let scroll = state.state ? state.state.scroll : 0;
 
+    const [scrollV, setScrollV] = useState(0);
     const [infoItems, setInfoItems] = useState([]);
     const [filter, setFilter] = useState(condition);
     const [zipCodeList, setZipCodeList] = useState(zipCode);
@@ -33,8 +35,18 @@ export default function List() {
                 })
         }
     }
+
     useEffect(() => {
         getApiData();
+        document.addEventListener("scroll", (e) => {
+            setScrollV(window.scrollY);
+        })
+    }, [infoItems])
+
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo({ top: scroll });
+        }, 1000);
     }, [])
 
     return (
@@ -42,7 +54,7 @@ export default function List() {
             <section className="info-filter">
                 <div className="info-filter-select">
                     <label htmlFor="info-filter-select-input">區域篩選</label>
-                    <div class="nes-select">
+                    <div className="nes-select">
                         <select id="info-filter-select-input" onChange={(e) => setFilter(e.target.value)}>
                             <option value="0">請選擇區域</option>
                             {zipCodeList.map(item => {
@@ -53,9 +65,9 @@ export default function List() {
                     </div>
                 </div>
             </section>
-            <ul className="info-list">
+            <ul id="list" className="info-list">
                 {currentInfoItems().map(item => {
-                    return <InfoItem info={item} condition={filter} />
+                    return <InfoItem id={item.Name} key={item.Id} info={item} condition={filter} scroll={scrollV} />
                 })}
             </ul>
         </>

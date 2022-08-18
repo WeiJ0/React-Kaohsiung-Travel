@@ -12,6 +12,10 @@ function GoogleMapBtn(props) {
 export default function Detail(props) {
     const state = useLocation();
     const condition = state.state.condition || 0;
+    const scroll = state.state.scroll || 0;
+
+    console.log(state.state);
+
     const [info, setInfo] = useState(state.state.data);
     const { Id, Name, Picture1, Picdescribe1, Toldescribe, Add, Tel, Travellinginfo, Opentime, Px, Py, Website } = info;
     setHistory(Id);
@@ -44,7 +48,7 @@ export default function Detail(props) {
 
             </section>
             <div className="back-btn">
-                <Link className="nes-btn" to={`/list`} state={{ condition }}>回列表頁</Link>
+                <Link className="nes-btn" to={`/list`} state={{ condition, scroll }}>回列表頁</Link>
             </div>
         </section>
     )
