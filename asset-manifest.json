@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React-Kaohsiung-Travel/static/css/main.373315f5.css",
+    "main.js": "/React-Kaohsiung-Travel/static/js/main.43b32aee.js",
+    "static/media/zpix.woff2": "/React-Kaohsiung-Travel/static/media/zpix.79cae3fea1d930213cb3.woff2",
+    "index.html": "/React-Kaohsiung-Travel/index.html",
+    "main.373315f5.css.map": "/React-Kaohsiung-Travel/static/css/main.373315f5.css.map",
+    "main.43b32aee.js.map": "/React-Kaohsiung-Travel/static/js/main.43b32aee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.373315f5.css",
+    "static/js/main.43b32aee.js"
+  ]
+}
