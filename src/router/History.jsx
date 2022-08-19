@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getLsItem, getHistory } from "../common";
 
 import InfoItem from "../components/InfoItem";
@@ -15,6 +15,12 @@ export default function History() {
             historyList.push(item);
         }
     })
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0
+        })
+    }, [])
 
     return (
         <>

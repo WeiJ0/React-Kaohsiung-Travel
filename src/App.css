@@ -11,7 +11,12 @@ html {
 body {
   font-family: ZpixReviewLocal, sans-serif !important;
 }
-
+header{
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+}
 .layout {
   display: flex;
   flex-direction: column;

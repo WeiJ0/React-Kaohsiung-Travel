@@ -41,12 +41,9 @@ export default function List() {
         document.addEventListener("scroll", (e) => {
             setScrollV(window.scrollY);
         })
-    }, [infoItems])
-
-    useEffect(() => {
         setTimeout(() => {
             window.scrollTo({ top: scroll });
-        }, 1000);
+        }, 100);
     }, [])
 
     return (
